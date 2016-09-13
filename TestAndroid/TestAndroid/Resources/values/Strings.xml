@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   
+    <string name="CurrentTime">The Current Time is %s</string>
+  <string name="TimeFormat">hh:mm</string>
+  <string name="UpdateButton">Update</string>
+    <string name="ApplicationName">TestAndroid</string>
+</resources>
