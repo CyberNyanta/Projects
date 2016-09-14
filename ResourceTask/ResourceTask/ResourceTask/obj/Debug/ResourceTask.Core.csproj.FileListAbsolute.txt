@@ -1,0 +1,5 @@
+D:\Projects\ResourceTask\ResourceTask\ResourceTask\bin\Debug\ResourceTask.dll
+D:\Projects\ResourceTask\ResourceTask\ResourceTask\bin\Debug\ResourceTask.pdb
+D:\Projects\ResourceTask\ResourceTask\ResourceTask\obj\Debug\ResourceTask.Core.csprojResolveAssemblyReference.cache
+D:\Projects\ResourceTask\ResourceTask\ResourceTask\obj\Debug\ResourceTask.dll
+D:\Projects\ResourceTask\ResourceTask\ResourceTask\obj\Debug\ResourceTask.pdb

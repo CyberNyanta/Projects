@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="CurrentTime">The Current Time is %s</string>
+  <string name="TimeFormat">hh:mmtt</string>
+  <string name="UpdateButton">Update</string>
+  <string name="ApplicationName">ResourceTask</string>
+</resources>
