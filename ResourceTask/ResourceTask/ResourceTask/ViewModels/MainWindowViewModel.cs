@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ResourceTask.Core.ViewModels
 {
-    public class MainWindowViewModel
+    public class MainWindowViewModel: BaseViewModel
     {
 
     }

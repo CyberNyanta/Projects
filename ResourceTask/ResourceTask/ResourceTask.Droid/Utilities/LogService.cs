@@ -10,6 +10,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using ResourceTask.Core.Utilities;
+using Java.Interop;
+using static Android.Manifest;
 
 namespace ResourceTask.Droid.Utilities
 {
@@ -20,20 +22,22 @@ namespace ResourceTask.Droid.Utilities
             throw new NotImplementedException();
         }
 
-        public void Info(object sender, string message, params object[] parameters)
+        public void Info(object sender, string message)
+        {
+            Save(message);
+        }
+
+        public void Warning(object sender, string warning)
         {
             throw new NotImplementedException();
         }
 
-        public void Warning(object sender, string warning, params object[] parameters)
+        private void Save(string message)
         {
-            throw new NotImplementedException();
-        }
-
-        private void SavetoSd(string message)
-        {
+           
+          
             var sdCardPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-            var filePath = System.IO.Path.Combine(sdCardPath, "iootext.txt");
+            var filePath = System.IO.Path.Combine(sdCardPath, "LogFile.txt");
             if (!System.IO.File.Exists(filePath))
             {
                 using (System.IO.StreamWriter write = new System.IO.StreamWriter(filePath, true))
