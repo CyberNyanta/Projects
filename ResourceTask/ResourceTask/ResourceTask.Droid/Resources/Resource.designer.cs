@@ -1798,19 +1798,31 @@ namespace ResourceTask.Droid
 			public const int Clock = 2130837578;
 			
 			// aapt resource value: 0x7f02004b
-			public const int design_fab_background = 2130837579;
+			public const int DataSynchronize_focused = 2130837579;
 			
 			// aapt resource value: 0x7f02004c
-			public const int design_snackbar_background = 2130837580;
+			public const int DataSynchronize_normal = 2130837580;
 			
 			// aapt resource value: 0x7f02004d
-			public const int Hourglass = 2130837581;
+			public const int DataSynchronize_pressed = 2130837581;
 			
 			// aapt resource value: 0x7f02004e
-			public const int Icon = 2130837582;
+			public const int design_fab_background = 2130837582;
 			
 			// aapt resource value: 0x7f02004f
-			public const int notification_template_icon_bg = 2130837583;
+			public const int design_snackbar_background = 2130837583;
+			
+			// aapt resource value: 0x7f020050
+			public const int Hourglass = 2130837584;
+			
+			// aapt resource value: 0x7f020051
+			public const int Icon = 2130837585;
+			
+			// aapt resource value: 0x7f020053
+			public const int notification_template_icon_bg = 2130837587;
+			
+			// aapt resource value: 0x7f020052
+			public const int UpdateButton = 2130837586;
 			
 			static Drawable()
 			{
