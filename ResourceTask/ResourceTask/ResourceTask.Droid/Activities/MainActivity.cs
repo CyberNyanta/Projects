@@ -60,14 +60,14 @@ namespace ResourceTask.Droid.Activities
             if ((ActivityCompat.CheckSelfPermission(this, Permission.ReadExternalStorage) == (int)Android.Content.PM.Permission.Granted) &&
   (ActivityCompat.CheckSelfPermission(this, Permission.WriteExternalStorage) == (int)Android.Content.PM.Permission.Granted))
             {
-                viewModel.LogToFile($"{Resource.String.ApplicationName} Current time:{time}");
+                viewModel.LogToFile($"{GetString(Resource.String.ApplicationName)} Current time:{time}");
             }
             else
             {
                 RequestStoragePermission(() => UpdateButtonClick());
             }
         }
-
+         
         private void RequestStoragePermission(Action callback)
         {
             if (ActivityCompat.ShouldShowRequestPermissionRationale(this, Permission.ReadExternalStorage)

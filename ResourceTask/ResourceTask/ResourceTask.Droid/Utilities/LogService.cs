@@ -37,12 +37,9 @@ namespace ResourceTask.Droid.Utilities
             //var sdCardPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
             var sdCardPath = Android.OS.Environment.ExternalStorageDirectory.Path;
             var filePath = System.IO.Path.Combine(sdCardPath, "LogFile.txt");
-            if (!System.IO.File.Exists(filePath))
+            using (System.IO.StreamWriter write = new System.IO.StreamWriter(filePath, true))
             {
-                using (System.IO.StreamWriter write = new System.IO.StreamWriter(filePath, true))
-                {
-                    write.Write(message);
-                }
+                write.WriteLine(message);
             }
         }
     }
