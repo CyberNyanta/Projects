@@ -10,6 +10,9 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using System.ComponentModel.Design;
+using TinyIoC;
+using ResourceTask.Core.Utilities;
+using ResourceTask.Droid.Utilities;
 
 namespace ResourceTask.Droid
 {
@@ -19,15 +22,14 @@ namespace ResourceTask.Droid
         public Application(IntPtr javaReference, JniHandleOwnership transfer) : base(javaReference, transfer) { }
         public override void OnCreate()
         {
+           			
+            var container = TinyIoCContainer.Current;
+
+            container.Register<ILogService, LogService>();
+
+
             base.OnCreate();
-            ////ViewModels				
-            //ServiceContainer.Register<LoginViewModel>(()	=>	new	LoginViewModel());
-            //ServiceContainer.Register<FriendViewModel>(()	=>	new	FriendViewModel());
-            //ServiceContainer.Register<MessageViewModel>(()	=>	new	MessageViewModel());
-            //ServiceContainer.Register<RegisterViewModel>(()	=>	new	RegisterViewModel());
-            ////Models				
-            //ServiceContainer.Register<ISettings>(()	=>	new	FakeSettings());
-            //ServiceContainer.Register<IWebService>(()	=>	new	FakeWebService());		} }
+            	
         }
     }
 }

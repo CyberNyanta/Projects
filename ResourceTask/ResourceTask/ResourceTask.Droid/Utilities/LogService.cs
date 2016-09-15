@@ -34,9 +34,8 @@ namespace ResourceTask.Droid.Utilities
 
         private void Save(string message)
         {
-           
-          
-            var sdCardPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            //var sdCardPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            var sdCardPath = Android.OS.Environment.ExternalStorageDirectory.Path;
             var filePath = System.IO.Path.Combine(sdCardPath, "LogFile.txt");
             if (!System.IO.File.Exists(filePath))
             {
