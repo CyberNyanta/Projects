@@ -11,7 +11,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_centerInParent="true"
-    android:gravity="right|center_horizontal">
+    android:gravity="right|center_horizontal"
     >
 
     <ImageView
@@ -36,7 +36,7 @@
         android:id="@+id/UpdateButton"
         android:background="@drawable/UpdateButton"
         android:gravity="right"
-        android:layout_margin="@dimen/margin_large"
+        android:layout_marginRight="@dimen/margin_large"
         
         />
 
