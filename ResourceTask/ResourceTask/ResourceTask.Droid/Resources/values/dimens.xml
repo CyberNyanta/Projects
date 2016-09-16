@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <dimen name="application_textSize">30dp</dimen>
+  <dimen name="mainActivity_textViewMargin">20dp</dimen>
+  <dimen name="mainActivity_imageHeight">200dp</dimen>
+  <dimen name="mainActivity_imageWidth">200dp</dimen>
+  <dimen name="mainActivity_buttonHeight">60dp</dimen>
+  <dimen name="mainActivity_buttonWidth">60dp</dimen>
+
+  <dimen name="margin_tiny">4dp</dimen>
+  <dimen name="margin_small">8dp</dimen>
+  <dimen name="margin_medium">16dp</dimen>
+  <dimen name="margin_large">32dp</dimen>
+  <dimen name="margin_huge">64dp</dimen>
+  
+</resources>

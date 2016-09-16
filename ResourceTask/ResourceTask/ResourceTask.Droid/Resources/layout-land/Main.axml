@@ -1,26 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:minWidth="25px"
-    android:minHeight="25px"
-    android:id="@+id/main_layout">
+    android:id="@+id/main_layout"
+    android:paddingTop="?android:attr/actionBarSize">
+
+  <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:gravity="right|center_horizontal">>
+
     <ImageView
         android:src="@drawable/Clock"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/mainActivity_imageWidth"
+        android:layout_height="@dimen/mainActivity_imageHeight"
         android:id="@+id/imageView"
-        android:tag="0" />
+        android:tag="0"
+        android:layout_gravity="center_horizontal"
+        
+/>
     <TextView
-        android:text=""
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/CurrentTime"
-        android:layout_margin="20dp" />
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/CurrentTime"
+       android:layout_margin="@dimen/mainActivity_textViewMargin"
+       android:textSize="@dimen/application_textSize"
+              android:layout_gravity="center_horizontal"/>
     <Button
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/mainActivity_buttonWidth"
+        android:layout_height="@dimen/mainActivity_buttonHeight"
         android:id="@+id/UpdateButton"
-        android:background="@drawable/UpdateButton" />
-</LinearLayout>
+        android:background="@drawable/UpdateButton"
+        android:gravity="right"
+        android:layout_marginRight="50dp " 
+        
+        />
+
+  </LinearLayout>
+</RelativeLayout>

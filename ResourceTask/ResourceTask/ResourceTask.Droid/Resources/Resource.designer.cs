@@ -1439,6 +1439,9 @@ namespace ResourceTask.Droid
 			// aapt resource value: 0x7f050007
 			public const int abc_text_size_title_material_toolbar = 2131034119;
 			
+			// aapt resource value: 0x7f05006b
+			public const int application_textSize = 2131034219;
+			
 			// aapt resource value: 0x7f050056
 			public const int design_appbar_elevation = 2131034198;
 			
@@ -1549,6 +1552,36 @@ namespace ResourceTask.Droid
 			
 			// aapt resource value: 0x7f050002
 			public const int item_touch_helper_swipe_escape_velocity = 2131034114;
+			
+			// aapt resource value: 0x7f05006f
+			public const int mainActivity_buttonHeight = 2131034223;
+			
+			// aapt resource value: 0x7f050070
+			public const int mainActivity_buttonWidth = 2131034224;
+			
+			// aapt resource value: 0x7f05006d
+			public const int mainActivity_imageHeight = 2131034221;
+			
+			// aapt resource value: 0x7f05006e
+			public const int mainActivity_imageWidth = 2131034222;
+			
+			// aapt resource value: 0x7f05006c
+			public const int mainActivity_textViewMargin = 2131034220;
+			
+			// aapt resource value: 0x7f050075
+			public const int margin_huge = 2131034229;
+			
+			// aapt resource value: 0x7f050074
+			public const int margin_large = 2131034228;
+			
+			// aapt resource value: 0x7f050073
+			public const int margin_medium = 2131034227;
+			
+			// aapt resource value: 0x7f050072
+			public const int margin_small = 2131034226;
+			
+			// aapt resource value: 0x7f050071
+			public const int margin_tiny = 2131034225;
 			
 			// aapt resource value: 0x7f05004b
 			public const int notification_large_icon_height = 2131034187;

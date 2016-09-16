@@ -97,7 +97,7 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\values\Strings.xml">
+    <AndroidResource Include="Resources\values\strings.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable-hdpi\Icon.png" />
@@ -137,10 +137,10 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\Hourglass.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\values-ar\Strings.xml" />
+    <AndroidResource Include="Resources\values-ar\strings.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\values-ru\Strings.xml" />
+    <AndroidResource Include="Resources\values-ru\strings.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xhdpi\DataSynchronize_pressed.png" />
@@ -188,7 +188,15 @@
     <AndroidResource Include="Resources\drawable-hdpi\DataSynchronize_normal.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\UpdateButton.xml" />
+    <AndroidResource Include="Resources\drawable\UpdateButton.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\dimens.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\values-\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.4.0.1\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.4.0.1\build\Xamarin.Android.Support.Vector.Drawable.targets')" />

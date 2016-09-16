@@ -1,5 +1,0 @@
-C:\Users\evgeniy.siyanko\documents\visual studio 2015\Projects\TestAndroid\App1\App1\bin\Debug\TestAndroid.dll
-C:\Users\evgeniy.siyanko\documents\visual studio 2015\Projects\TestAndroid\App1\App1\bin\Debug\TestAndroid.pdb
-C:\Users\evgeniy.siyanko\documents\visual studio 2015\Projects\TestAndroid\App1\App1\obj\Debug\TestAndroid.Core.csprojResolveAssemblyReference.cache
-C:\Users\evgeniy.siyanko\documents\visual studio 2015\Projects\TestAndroid\App1\App1\obj\Debug\TestAndroid.dll
-C:\Users\evgeniy.siyanko\documents\visual studio 2015\Projects\TestAndroid\App1\App1\obj\Debug\TestAndroid.pdb
