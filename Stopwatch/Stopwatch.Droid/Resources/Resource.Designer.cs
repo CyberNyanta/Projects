@@ -79,6 +79,21 @@ namespace Stopwatch.Droid
 			// aapt resource value: 0x7f04000f
 			public const int design_snackbar_out = 2130968591;
 			
+			// aapt resource value: 0x7f040010
+			public const int fab_state_list_animator = 2130968592;
+			
+			// aapt resource value: 0x7f040011
+			public const int minus_to_plus = 2130968593;
+			
+			// aapt resource value: 0x7f040012
+			public const int plus_to_minus = 2130968594;
+			
+			// aapt resource value: 0x7f040013
+			public const int rotate_anticlockwise = 2130968595;
+			
+			// aapt resource value: 0x7f040014
+			public const int rotate_clockwise = 2130968596;
+			
 			static Animation()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -988,32 +1003,32 @@ namespace Stopwatch.Droid
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f0b0044
-			public const int abc_background_cache_hint_selector_material_dark = 2131427396;
+			// aapt resource value: 0x7f0b0047
+			public const int abc_background_cache_hint_selector_material_dark = 2131427399;
 			
-			// aapt resource value: 0x7f0b0045
-			public const int abc_background_cache_hint_selector_material_light = 2131427397;
+			// aapt resource value: 0x7f0b0048
+			public const int abc_background_cache_hint_selector_material_light = 2131427400;
 			
-			// aapt resource value: 0x7f0b0046
-			public const int abc_color_highlight_material = 2131427398;
+			// aapt resource value: 0x7f0b0049
+			public const int abc_color_highlight_material = 2131427401;
 			
 			// aapt resource value: 0x7f0b0000
 			public const int abc_input_method_navigation_guard = 2131427328;
 			
-			// aapt resource value: 0x7f0b0047
-			public const int abc_primary_text_disable_only_material_dark = 2131427399;
-			
-			// aapt resource value: 0x7f0b0048
-			public const int abc_primary_text_disable_only_material_light = 2131427400;
-			
-			// aapt resource value: 0x7f0b0049
-			public const int abc_primary_text_material_dark = 2131427401;
-			
 			// aapt resource value: 0x7f0b004a
-			public const int abc_primary_text_material_light = 2131427402;
+			public const int abc_primary_text_disable_only_material_dark = 2131427402;
 			
 			// aapt resource value: 0x7f0b004b
-			public const int abc_search_url_text = 2131427403;
+			public const int abc_primary_text_disable_only_material_light = 2131427403;
+			
+			// aapt resource value: 0x7f0b004c
+			public const int abc_primary_text_material_dark = 2131427404;
+			
+			// aapt resource value: 0x7f0b004d
+			public const int abc_primary_text_material_light = 2131427405;
+			
+			// aapt resource value: 0x7f0b004e
+			public const int abc_search_url_text = 2131427406;
 			
 			// aapt resource value: 0x7f0b0001
 			public const int abc_search_url_text_normal = 2131427329;
@@ -1024,11 +1039,11 @@ namespace Stopwatch.Droid
 			// aapt resource value: 0x7f0b0003
 			public const int abc_search_url_text_selected = 2131427331;
 			
-			// aapt resource value: 0x7f0b004c
-			public const int abc_secondary_text_material_dark = 2131427404;
+			// aapt resource value: 0x7f0b004f
+			public const int abc_secondary_text_material_dark = 2131427407;
 			
-			// aapt resource value: 0x7f0b004d
-			public const int abc_secondary_text_material_light = 2131427405;
+			// aapt resource value: 0x7f0b0050
+			public const int abc_secondary_text_material_light = 2131427408;
 			
 			// aapt resource value: 0x7f0b0004
 			public const int accent_material_dark = 2131427332;
@@ -1198,6 +1213,15 @@ namespace Stopwatch.Droid
 			// aapt resource value: 0x7f0b0031
 			public const int ripple_material_light = 2131427377;
 			
+			// aapt resource value: 0x7f0b0044
+			public const int sa_green = 2131427396;
+			
+			// aapt resource value: 0x7f0b0046
+			public const int sa_green_dark = 2131427398;
+			
+			// aapt resource value: 0x7f0b0045
+			public const int sa_green_transparent = 2131427397;
+			
 			// aapt resource value: 0x7f0b0032
 			public const int secondary_text_default_material_dark = 2131427378;
 			
@@ -1216,11 +1240,11 @@ namespace Stopwatch.Droid
 			// aapt resource value: 0x7f0b0037
 			public const int switch_thumb_disabled_material_light = 2131427383;
 			
-			// aapt resource value: 0x7f0b004e
-			public const int switch_thumb_material_dark = 2131427406;
+			// aapt resource value: 0x7f0b0051
+			public const int switch_thumb_material_dark = 2131427409;
 			
-			// aapt resource value: 0x7f0b004f
-			public const int switch_thumb_material_light = 2131427407;
+			// aapt resource value: 0x7f0b0052
+			public const int switch_thumb_material_light = 2131427410;
 			
 			// aapt resource value: 0x7f0b0038
 			public const int switch_thumb_normal_material_dark = 2131427384;
@@ -1442,6 +1466,12 @@ namespace Stopwatch.Droid
 			// aapt resource value: 0x7f050007
 			public const int abc_text_size_title_material_toolbar = 2131034119;
 			
+			// aapt resource value: 0x7f05006b
+			public const int activity_horizontal_margin = 2131034219;
+			
+			// aapt resource value: 0x7f05006c
+			public const int activity_vertical_margin = 2131034220;
+			
 			// aapt resource value: 0x7f050056
 			public const int design_appbar_elevation = 2131034198;
 			
@@ -1534,6 +1564,12 @@ namespace Stopwatch.Droid
 			
 			// aapt resource value: 0x7f050047
 			public const int disabled_alpha_material_light = 2131034183;
+			
+			// aapt resource value: 0x7f05006d
+			public const int fab_elevation = 2131034221;
+			
+			// aapt resource value: 0x7f05006e
+			public const int fab_rise = 2131034222;
 			
 			// aapt resource value: 0x7f050048
 			public const int highlight_alpha_material_colored = 2131034184;
@@ -1801,28 +1837,43 @@ namespace Stopwatch.Droid
 			public const int abc_textfield_search_material = 2130837578;
 			
 			// aapt resource value: 0x7f02004b
-			public const int background_image = 2130837579;
+			public const int animated_minus = 2130837579;
 			
 			// aapt resource value: 0x7f02004c
-			public const int design_fab_background = 2130837580;
+			public const int animated_plus = 2130837580;
 			
 			// aapt resource value: 0x7f02004d
-			public const int design_snackbar_background = 2130837581;
+			public const int background_image = 2130837581;
 			
 			// aapt resource value: 0x7f02004e
-			public const int Icon = 2130837582;
-			
-			// aapt resource value: 0x7f020052
-			public const int notification_template_icon_bg = 2130837586;
+			public const int design_fab_background = 2130837582;
 			
 			// aapt resource value: 0x7f02004f
-			public const int PlayButton_normal = 2130837583;
+			public const int design_snackbar_background = 2130837583;
 			
 			// aapt resource value: 0x7f020050
-			public const int PlayButton_pressed = 2130837584;
+			public const int fab_background = 2130837584;
 			
 			// aapt resource value: 0x7f020051
-			public const int StartButton = 2130837585;
+			public const int Icon = 2130837585;
+			
+			// aapt resource value: 0x7f020052
+			public const int minus = 2130837586;
+			
+			// aapt resource value: 0x7f020057
+			public const int notification_template_icon_bg = 2130837591;
+			
+			// aapt resource value: 0x7f020053
+			public const int PlayButton_normal = 2130837587;
+			
+			// aapt resource value: 0x7f020054
+			public const int PlayButton_pressed = 2130837588;
+			
+			// aapt resource value: 0x7f020055
+			public const int plus = 2130837589;
+			
+			// aapt resource value: 0x7f020056
+			public const int StartButton = 2130837590;
 			
 			static Drawable()
 			{
@@ -1837,11 +1888,11 @@ namespace Stopwatch.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060083
-			public const int UpdateButton = 2131099779;
+			// aapt resource value: 0x7f060088
+			public const int UpdateButton = 2131099784;
 			
-			// aapt resource value: 0x7f060076
-			public const int action0 = 2131099766;
+			// aapt resource value: 0x7f06007b
+			public const int action0 = 2131099771;
 			
 			// aapt resource value: 0x7f06005a
 			public const int action_bar = 2131099738;
@@ -1867,8 +1918,8 @@ namespace Stopwatch.Droid
 			// aapt resource value: 0x7f06005b
 			public const int action_context_bar = 2131099739;
 			
-			// aapt resource value: 0x7f06007a
-			public const int action_divider = 2131099770;
+			// aapt resource value: 0x7f06007f
+			public const int action_divider = 2131099775;
 			
 			// aapt resource value: 0x7f060003
 			public const int action_menu_divider = 2131099651;
@@ -1903,8 +1954,8 @@ namespace Stopwatch.Droid
 			// aapt resource value: 0x7f060044
 			public const int buttonPanel = 2131099716;
 			
-			// aapt resource value: 0x7f060077
-			public const int cancel_action = 2131099767;
+			// aapt resource value: 0x7f06007c
+			public const int cancel_action = 2131099772;
 			
 			// aapt resource value: 0x7f06002b
 			public const int center = 2131099691;
@@ -1918,8 +1969,8 @@ namespace Stopwatch.Droid
 			// aapt resource value: 0x7f060052
 			public const int checkbox = 2131099730;
 			
-			// aapt resource value: 0x7f06007d
-			public const int chronometer = 2131099773;
+			// aapt resource value: 0x7f060082
+			public const int chronometer = 2131099778;
 			
 			// aapt resource value: 0x7f060033
 			public const int clip_horizontal = 2131099699;
@@ -1969,8 +2020,8 @@ namespace Stopwatch.Droid
 			// aapt resource value: 0x7f06001c
 			public const int end = 2131099676;
 			
-			// aapt resource value: 0x7f060082
-			public const int end_padder = 2131099778;
+			// aapt resource value: 0x7f060087
+			public const int end_padder = 2131099783;
 			
 			// aapt resource value: 0x7f060023
 			public const int enterAlways = 2131099683;
@@ -1986,6 +2037,21 @@ namespace Stopwatch.Droid
 			
 			// aapt resource value: 0x7f060051
 			public const int expanded_menu = 2131099729;
+			
+			// aapt resource value: 0x7f060075
+			public const int fab = 2131099765;
+			
+			// aapt resource value: 0x7f060076
+			public const int fab_action_1 = 2131099766;
+			
+			// aapt resource value: 0x7f060074
+			public const int fab_action_2 = 2131099764;
+			
+			// aapt resource value: 0x7f060073
+			public const int fab_action_3 = 2131099763;
+			
+			// aapt resource value: 0x7f060072
+			public const int fab_container = 2131099762;
 			
 			// aapt resource value: 0x7f060035
 			public const int fill = 2131099701;
@@ -2014,14 +2080,14 @@ namespace Stopwatch.Droid
 			// aapt resource value: 0x7f06003f
 			public const int image = 2131099711;
 			
-			// aapt resource value: 0x7f060081
-			public const int info = 2131099777;
+			// aapt resource value: 0x7f060086
+			public const int info = 2131099782;
 			
-			// aapt resource value: 0x7f060073
-			public const int input_login = 2131099763;
+			// aapt resource value: 0x7f060078
+			public const int input_login = 2131099768;
 			
-			// aapt resource value: 0x7f060074
-			public const int input_password = 2131099764;
+			// aapt resource value: 0x7f060079
+			public const int input_password = 2131099769;
 			
 			// aapt resource value: 0x7f060000
 			public const int item_touch_helper_previous_elevation = 2131099648;
@@ -2029,11 +2095,11 @@ namespace Stopwatch.Droid
 			// aapt resource value: 0x7f06002f
 			public const int left = 2131099695;
 			
-			// aapt resource value: 0x7f06007b
-			public const int line1 = 2131099771;
+			// aapt resource value: 0x7f060080
+			public const int line1 = 2131099776;
 			
-			// aapt resource value: 0x7f06007f
-			public const int line3 = 2131099775;
+			// aapt resource value: 0x7f060084
+			public const int line3 = 2131099780;
 			
 			// aapt resource value: 0x7f06000b
 			public const int listMode = 2131099659;
@@ -2041,8 +2107,8 @@ namespace Stopwatch.Droid
 			// aapt resource value: 0x7f060041
 			public const int list_item = 2131099713;
 			
-			// aapt resource value: 0x7f060079
-			public const int media_actions = 2131099769;
+			// aapt resource value: 0x7f06007e
+			public const int media_actions = 2131099774;
 			
 			// aapt resource value: 0x7f06001d
 			public const int middle = 2131099677;
@@ -2101,8 +2167,8 @@ namespace Stopwatch.Droid
 			// aapt resource value: 0x7f06004c
 			public const int scrollView = 2131099724;
 			
-			// aapt resource value: 0x7f060072
-			public const int scrollView1 = 2131099762;
+			// aapt resource value: 0x7f060077
+			public const int scrollView1 = 2131099767;
 			
 			// aapt resource value: 0x7f060039
 			public const int scrollable = 2131099705;
@@ -2179,29 +2245,29 @@ namespace Stopwatch.Droid
 			// aapt resource value: 0x7f060031
 			public const int start = 2131099697;
 			
-			// aapt resource value: 0x7f060078
-			public const int status_bar_latest_event_content = 2131099768;
+			// aapt resource value: 0x7f06007d
+			public const int status_bar_latest_event_content = 2131099773;
 			
 			// aapt resource value: 0x7f060065
 			public const int submit_area = 2131099749;
 			
-			// aapt resource value: 0x7f060075
-			public const int submit_button = 2131099765;
+			// aapt resource value: 0x7f06007a
+			public const int submit_button = 2131099770;
 			
 			// aapt resource value: 0x7f06000d
 			public const int tabMode = 2131099661;
 			
-			// aapt resource value: 0x7f060080
-			public const int text = 2131099776;
+			// aapt resource value: 0x7f060085
+			public const int text = 2131099781;
 			
-			// aapt resource value: 0x7f06007e
-			public const int text2 = 2131099774;
+			// aapt resource value: 0x7f060083
+			public const int text2 = 2131099779;
 			
 			// aapt resource value: 0x7f06004d
 			public const int textSpacerNoButtons = 2131099725;
 			
-			// aapt resource value: 0x7f06007c
-			public const int time = 2131099772;
+			// aapt resource value: 0x7f060081
+			public const int time = 2131099777;
 			
 			// aapt resource value: 0x7f060043
 			public const int title = 2131099715;
@@ -2263,6 +2329,9 @@ namespace Stopwatch.Droid
 			
 			// aapt resource value: 0x7f0a0005
 			public const int design_snackbar_text_max_lines = 2131361797;
+			
+			// aapt resource value: 0x7f0a0007
+			public const int fab_duration = 2131361799;
 			
 			// aapt resource value: 0x7f0a0004
 			public const int status_bar_notification_info_maxnum = 2131361796;
@@ -2392,46 +2461,49 @@ namespace Stopwatch.Droid
 			public const int design_navigation_menu_item = 2130903076;
 			
 			// aapt resource value: 0x7f030025
-			public const int Login = 2130903077;
+			public const int fab = 2130903077;
 			
 			// aapt resource value: 0x7f030026
-			public const int notification_media_action = 2130903078;
+			public const int Login = 2130903078;
 			
 			// aapt resource value: 0x7f030027
-			public const int notification_media_cancel_action = 2130903079;
+			public const int notification_media_action = 2130903079;
 			
 			// aapt resource value: 0x7f030028
-			public const int notification_template_big_media = 2130903080;
+			public const int notification_media_cancel_action = 2130903080;
 			
 			// aapt resource value: 0x7f030029
-			public const int notification_template_big_media_narrow = 2130903081;
+			public const int notification_template_big_media = 2130903081;
 			
 			// aapt resource value: 0x7f03002a
-			public const int notification_template_lines = 2130903082;
+			public const int notification_template_big_media_narrow = 2130903082;
 			
 			// aapt resource value: 0x7f03002b
-			public const int notification_template_media = 2130903083;
+			public const int notification_template_lines = 2130903083;
 			
 			// aapt resource value: 0x7f03002c
-			public const int notification_template_part_chronometer = 2130903084;
+			public const int notification_template_media = 2130903084;
 			
 			// aapt resource value: 0x7f03002d
-			public const int notification_template_part_time = 2130903085;
+			public const int notification_template_part_chronometer = 2130903085;
 			
 			// aapt resource value: 0x7f03002e
-			public const int select_dialog_item_material = 2130903086;
+			public const int notification_template_part_time = 2130903086;
 			
 			// aapt resource value: 0x7f03002f
-			public const int select_dialog_multichoice_material = 2130903087;
+			public const int select_dialog_item_material = 2130903087;
 			
 			// aapt resource value: 0x7f030030
-			public const int select_dialog_singlechoice_material = 2130903088;
+			public const int select_dialog_multichoice_material = 2130903088;
 			
 			// aapt resource value: 0x7f030031
-			public const int Stopwatch = 2130903089;
+			public const int select_dialog_singlechoice_material = 2130903089;
 			
 			// aapt resource value: 0x7f030032
-			public const int support_simple_spinner_dropdown_item = 2130903090;
+			public const int Stopwatch = 2130903090;
+			
+			// aapt resource value: 0x7f030033
+			public const int support_simple_spinner_dropdown_item = 2130903091;
 			
 			static Layout()
 			{
@@ -2548,6 +2620,9 @@ namespace Stopwatch.Droid
 			
 			// aapt resource value: 0x7f09013f
 			public const int Animation_Design_BottomSheetDialog = 2131296575;
+			
+			// aapt resource value: 0x7f090157
+			public const int AppTheme = 2131296599;
 			
 			// aapt resource value: 0x7f09008a
 			public const int Base_AlertDialog_AppCompat = 2131296394;
@@ -2977,6 +3052,12 @@ namespace Stopwatch.Droid
 			
 			// aapt resource value: 0x7f090140
 			public const int Base_Widget_Design_TabLayout = 2131296576;
+			
+			// aapt resource value: 0x7f090158
+			public const int FloatingActionButton = 2131296600;
+			
+			// aapt resource value: 0x7f090159
+			public const int FloatingActionButton_Mini = 2131296601;
 			
 			// aapt resource value: 0x7f090017
 			public const int Platform_AppCompat = 2131296279;

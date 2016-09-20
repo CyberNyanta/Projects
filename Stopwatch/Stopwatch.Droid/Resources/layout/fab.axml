@@ -14,8 +14,7 @@
         android:src="@drawable/plus"
         android:layout_above="@+id/fab_action_2"
         android:layout_alignEnd="@+id/fab"
-        android:contentDescription="@null"
-        android:onClick="fabAction3" />
+        android:contentDescription="@null"/>
 
     <ImageButton
         android:id="@id/fab_action_2"
@@ -23,8 +22,7 @@
         android:src="@drawable/plus"
         android:layout_above="@+id/fab_action_1"
         android:layout_alignEnd="@id/fab"
-        android:contentDescription="@null"
-        android:onClick="fabAction2" />
+        android:contentDescription="@null"/>
 
     <ImageButton
         android:id="@id/fab_action_1"
@@ -32,8 +30,7 @@
         android:src="@drawable/plus"
         android:layout_above="@id/fab"
         android:layout_alignEnd="@id/fab"
-        android:contentDescription="@null"
-        android:onClick="fabAction1" />
+        android:contentDescription="@null" />
 
     <ImageButton
         android:id="@id/fab"
