@@ -1860,20 +1860,14 @@ namespace Stopwatch.Droid
 			// aapt resource value: 0x7f020052
 			public const int minus = 2130837586;
 			
-			// aapt resource value: 0x7f020057
-			public const int notification_template_icon_bg = 2130837591;
+			// aapt resource value: 0x7f020055
+			public const int notification_template_icon_bg = 2130837589;
 			
 			// aapt resource value: 0x7f020053
-			public const int PlayButton_normal = 2130837587;
+			public const int plus = 2130837587;
 			
 			// aapt resource value: 0x7f020054
-			public const int PlayButton_pressed = 2130837588;
-			
-			// aapt resource value: 0x7f020055
-			public const int plus = 2130837589;
-			
-			// aapt resource value: 0x7f020056
-			public const int StartButton = 2130837590;
+			public const int StartButton = 2130837588;
 			
 			static Drawable()
 			{
@@ -1887,9 +1881,6 @@ namespace Stopwatch.Droid
 		
 		public partial class Id
 		{
-			
-			// aapt resource value: 0x7f060088
-			public const int UpdateButton = 2131099784;
 			
 			// aapt resource value: 0x7f06007b
 			public const int action0 = 2131099771;
@@ -2244,6 +2235,9 @@ namespace Stopwatch.Droid
 			
 			// aapt resource value: 0x7f060031
 			public const int start = 2131099697;
+			
+			// aapt resource value: 0x7f060088
+			public const int start_button = 2131099784;
 			
 			// aapt resource value: 0x7f06007d
 			public const int status_bar_latest_event_content = 2131099773;
@@ -3130,6 +3124,9 @@ namespace Stopwatch.Droid
 			
 			// aapt resource value: 0x7f090035
 			public const int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = 2131296309;
+			
+			// aapt resource value: 0x7f09015a
+			public const int StartButton = 2131296602;
 			
 			// aapt resource value: 0x7f0900b6
 			public const int TextAppearance_AppCompat = 2131296438;

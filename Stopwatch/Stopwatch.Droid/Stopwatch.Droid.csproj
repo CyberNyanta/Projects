@@ -123,12 +123,6 @@
     <AndroidResource Include="Resources\drawable\StartButton.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\PlayButton_normal.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\PlayButton_pressed" />
-  </ItemGroup>
-  <ItemGroup>
     <XamarinComponentReference Include="xamandroidsupportdesign">
       <Visible>False</Visible>
       <Version>23.4.0.1</Version>

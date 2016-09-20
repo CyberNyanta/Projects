@@ -1,6 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-  <item android:drawable="@drawable/PlayButton_pressed"
-        android:state_pressed="true" />
-  <item android:drawable="@drawable/PlayButton_normal" />
-</selector>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:viewportWidth="512"
+    android:viewportHeight="512"
+    android:width="50dp"
+    android:height="50dp">
+  <path
+      android:pathData="M512 256A256 256 0 0 1 256 512 256 256 0 0 1 0 256 256 256 0 0 1 256 0 256 256 0 0 1 512 256Z"
+      android:fillColor="@color/sa_green" />
+  <group
+      android:scaleX="10.3125"
+      android:scaleY="10.3125"
+      android:translateX="92.79954"
+      android:translateY="91">
+    <path
+        android:pathData="M0 0L15.825011 8.0009766 31.650999 15.997986 15.825011 23.998993 0 32 0 15.997986Z"
+        android:fillColor="@color/sa_green_dark" />
+  </group>
+</vector>
