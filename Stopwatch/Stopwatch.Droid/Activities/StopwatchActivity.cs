@@ -19,7 +19,7 @@ namespace Stopwatch.Droid.Activities
     [Activity(Label = "StopwatchActivity", Icon = "@drawable/icon")]
     public class StopwatchActivity : Activity
     {
-
+        #region Listeners
         class ClickListener : Java.Lang.Object, View.IOnClickListener
         {
             StopwatchActivity instance;
@@ -63,7 +63,11 @@ namespace Stopwatch.Droid.Activities
                 return true;
             }
         }
+        #endregion
 
+        
+
+        #region prop
         const String TAG = "Floating Action Button";
         const String TRANSLATION_Y = "translationY";
         internal ImageButton fab;
@@ -74,38 +78,111 @@ namespace Stopwatch.Droid.Activities
         internal float offset1;
         internal float offset2;
         internal float offset3;
+        LinearLayout startlayout;
+        ImageButton startButton;
+        Chronometer chronometer;
 
         internal ViewGroup fabContainer;
-        protected override void OnCreate(Bundle savedInstanceState)
+        long startTime;
+        #endregion
+
+
+        protected override void OnCreate(Bundle instance)
         {
-            base.OnCreate(savedInstanceState);
+            base.OnCreate(instance);
             SetContentView(Resource.Layout.Stopwatch);
+           
             fabContainer = (ViewGroup)FindViewById(Resource.Id.fab_container);
             fab = (ImageButton)FindViewById(Resource.Id.fab);
             fabAction1 = FindViewById(Resource.Id.fab_action_1);
             fabAction2 = FindViewById(Resource.Id.fab_action_2);
             fabAction3 = FindViewById(Resource.Id.fab_action_3);
+            chronometer = FindViewById<Chronometer>(Resource.Id.chronometer);
+
+            startlayout = FindViewById<LinearLayout>(Resource.Id.start_layout);
+            var userName = FindViewById<TextView>(Resource.Id.user_name);
+            userName.Text = Intent.GetStringExtra("login");
+            startButton = FindViewById<ImageButton>(Resource.Id.start_button);
+
             fab.SetOnClickListener(new ClickListener(this));
 
             fabContainer.ViewTreeObserver.AddOnPreDrawListener(new PreDrawListener(this));
+
+            startButton.Click += delegate
+            {
+                StartButtonClick();
+            };
             fabAction1.Click += delegate
             {
-                fabAction11();
+                FabAction1();
             };
             fabAction2.Click += delegate
             {
-                fabAction22();
+                FabAction2();
             };
             fabAction3.Click += delegate
             {
-                fabAction33();
+                FabAction3();
             };
+
+
+        }
+
+        protected override void OnSaveInstanceState(Bundle outState)
+        {
+            base.OnSaveInstanceState(outState);
+            outState.PutLong("startTime", startTime);
+
+
+
+        }
+
+        protected override void OnRestoreInstanceState(Bundle savedInstanceState)
+        {
+            base.OnRestoreInstanceState(savedInstanceState);
+
+            if (savedInstanceState != null)
+            {
+                startlayout.Visibility = ViewStates.Gone;
+                fabContainer.Visibility = ViewStates.Visible;
+                chronometer.Visibility = ViewStates.Visible;
+                startTime = savedInstanceState.GetLong("startTime");
+                chronometer.Base = startTime;
+                chronometer.Start();
+            }
         }
 
 
+        #region Actions
+        public void FabAction1()
+        {
+            Log.Info(TAG, "Action 1");
+        }
 
+        public void FabAction2()
+        {
+            Log.Info(TAG, "Action 2");
+        }
 
+        public void FabAction3()    
+        {
+            Log.Info(TAG, "Action 3");
+        }
 
+        public void StartButtonClick()
+        {
+            
+            startlayout.Visibility = ViewStates.Gone;
+            fabContainer.Visibility = ViewStates.Visible;
+            chronometer.Visibility = ViewStates.Visible;
+         
+            startTime = SystemClock.ElapsedRealtime();
+            chronometer.Base = startTime;
+            chronometer.Start();
+        }
+        #endregion
+
+        #region Animations
         private void collapseFab()
         {
             fab.SetImageResource(Resource.Drawable.animated_minus);
@@ -143,25 +220,16 @@ namespace Stopwatch.Droid.Activities
         private void animateFab()
         {
             Drawable drawable = fab.Drawable;
-            if (drawable is IAnimatable) {
+            if (drawable is IAnimatable)
+            {
                 ((IAnimatable)drawable).Start();
             }
         }
+        #endregion
 
-        public void fabAction11()
-        {
-            Log.Info(TAG, "Action 1");
-        }
 
-        public void fabAction22()
-        {
-            Log.Info(TAG, "Action 2");
-        }
 
-        public void fabAction33()
-        {
-            Log.Info(TAG, "Action 3");
-        }
+
 
     }
 }

@@ -3,5 +3,6 @@
   <color name="sa_green">#1E9618</color>
   <color name="sa_green_transparent">#801E9618</color>
   <color name="sa_green_dark">#146310</color>
-  
+  <color name="light_grey">#8C8C8B</color>
+  <color name="dark_grey">#3C3C3C</color>
 </resources>
