@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 namespace Stopwatch.Droid.Services
 {
 	[Service]
-	[IntentFilter(new String[] { "com.xamarin.StopwatchService" })]
+	[IntentFilter(new String[] { "com.xamarin.StopwatchService" } )]
 	public class StopwatchService : Service
 	{
 		Timer timer;
@@ -51,15 +51,23 @@ namespace Stopwatch.Droid.Services
         [return: GeneratedEnum]
 		public override StartCommandResult OnStartCommand(Intent intent, [GeneratedEnum] StartCommandFlags flags, int startId)
 		{
-			var ongoing = new Notification(Resource.Drawable.StartButton, "DemoService in foreground");
-			var pendingIntent = PendingIntent.GetActivity(this, 0, new Intent(this, typeof(Stopwatch.Droid.Activities.StopwatchActivity)), 0);
-			ongoing.SetLatestEventInfo(this, "DemoService", "DemoService is running in the foreground", pendingIntent);
-			//StartForeground((int)NotificationFlags.HighPriority, null);
+			
 			return StartCommandResult.RedeliverIntent;
 
 		
 		}
-	}
+        public override void OnDestroy()
+        {
+            base.OnDestroy();
+            
+        }
+
+        public override void OnTaskRemoved(Intent rootIntent)
+        {
+            base.OnTaskRemoved(rootIntent);
+            StopSelf();
+        }
+    }
 
 	public class StopwatchServiceBinder : Binder
 	{

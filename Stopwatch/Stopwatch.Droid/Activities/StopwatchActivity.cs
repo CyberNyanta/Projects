@@ -131,7 +131,6 @@ namespace Stopwatch.Droid.Activities
         StopwatchServiceBinder binder;
 		StopwatchServiceConnection stopwatchServiceConnection;
 		bool isBound = false;
-		bool isConfigurationChange = false;
 
 
 		#endregion
@@ -178,10 +177,7 @@ namespace Stopwatch.Droid.Activities
                 OnTimerReload();
 			};
 
-			stopwatchServiceConnection = LastNonConfigurationInstance as StopwatchServiceConnection;
 
-			if (stopwatchServiceConnection != null)
-				binder = stopwatchServiceConnection.Binder;
 		}
 
 		protected override void OnStart()
@@ -189,45 +185,33 @@ namespace Stopwatch.Droid.Activities
 			base.OnStart();
 
 			Intent stopwatchServiceIntent = new Intent("com.xamarin.StopwatchService");
-			//Intent bi = new Intent("com.android.vending.billing.InAppBillingService.BIND");
-			//bi.SetPackage("com.xamarin.StopwatchService");
-			//stopwatchServiceIntent = bi;
 			stopwatchServiceConnection = new StopwatchServiceConnection(this);
 			ApplicationContext.BindService(stopwatchServiceIntent, stopwatchServiceConnection, Bind.AutoCreate);
 		}
 
-		protected override void OnSaveInstanceState(Bundle outState)
-		{
-			base.OnSaveInstanceState(outState);
-			outState.PutLong("startTime", startTime);
-
-
-
-		}
 		protected override void OnDestroy()
 		{
 			base.OnDestroy();
 
-			if (!isConfigurationChange)
-			{
-				if (isBound)
-				{
-					UnbindService(stopwatchServiceConnection);
-					isBound = false;
-				}
-			}
-		}
+            if (isBound)
+            {
+                
+                ApplicationContext.UnbindService(stopwatchServiceConnection);
+                isBound = false;
+                StopService(new Intent("com.xamarin.StopwatchService"));
+            }
+        }
 
-		public override Java.Lang.Object OnRetainNonConfigurationInstance()
-		{
-			base.OnRetainNonConfigurationInstance();
 
-			isConfigurationChange = true;
+        protected override void OnSaveInstanceState(Bundle outState)
+        {
+            base.OnSaveInstanceState(outState);
+            outState.PutLong("startTime", startTime);
 
-			return stopwatchServiceConnection;
-		}
 
-		protected override void OnRestoreInstanceState(Bundle savedInstanceState)
+
+        }
+        protected override void OnRestoreInstanceState(Bundle savedInstanceState)
 		{
 			base.OnRestoreInstanceState(savedInstanceState);
 
@@ -330,6 +314,7 @@ namespace Stopwatch.Droid.Activities
 			builder.SetContentTitle(title);
 			builder.SetContentText(text);
 			builder.SetSmallIcon(icon);
+            
 
 			// Build the notification:
 			Notification notification = builder.Build();

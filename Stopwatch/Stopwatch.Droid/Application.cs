@@ -4,7 +4,7 @@ using Android.App;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-
+using Android.Content;
 
 namespace ResourceTask.Droid
 {
@@ -18,5 +18,13 @@ namespace ResourceTask.Droid
             base.OnCreate();
 
         }
+        public override void OnTerminate()
+        {
+            ApplicationContext.StopService(new Intent("com.xamarin.StopwatchService"));
+            base.OnTerminate();
+            
+        }
+       
+
     }
 }
