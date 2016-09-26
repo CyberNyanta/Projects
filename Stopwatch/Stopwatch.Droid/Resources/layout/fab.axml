@@ -8,23 +8,23 @@
         android:clipChildren="true"
         android:visibility="invisible">
         <ImageButton
-            android:id="@+id/fab_action_3"
+            android:id="@+id/fab_reload"
             style="@style/FloatingActionButton.Mini"
-            android:src="@drawable/plus"
-            android:layout_above="@+id/fab_action_2"
+            android:src="@drawable/reload"
+            android:layout_above="@+id/fab_stop"
             android:layout_alignEnd="@+id/fab"
             android:contentDescription="@null" />
         <ImageButton
-            android:id="@id/fab_action_2"
+            android:id="@id/fab_stop"
             style="@style/FloatingActionButton.Mini"
-            android:src="@drawable/plus"
-            android:layout_above="@+id/fab_action_1"
+            android:src="@drawable/stop"
+            android:layout_above="@+id/fab_pause"
             android:layout_alignEnd="@id/fab"
             android:contentDescription="@null" />
         <ImageButton
-            android:id="@id/fab_action_1"
+            android:id="@id/fab_pause"
             style="@style/FloatingActionButton.Mini"
-            android:src="@drawable/plus"
+            android:src="@drawable/pause"
             android:layout_above="@id/fab"
             android:layout_alignEnd="@id/fab"
             android:contentDescription="@null" />
@@ -35,7 +35,6 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:contentDescription="@null"
-            android:visibility="visible"
             android:layout_marginTop="8dp" />
     </RelativeLayout>
 </merge>

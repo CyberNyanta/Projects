@@ -37,8 +37,18 @@ namespace Stopwatch.Droid.Services
 			timer.Start();
 		}
 
+        public void StopTimer()
+        {
+            timer.Stop();            
+        }
 
-		[return: GeneratedEnum]
+        public void ResumeTimer()
+        {
+            timer.Start();
+        }
+
+
+        [return: GeneratedEnum]
 		public override StartCommandResult OnStartCommand(Intent intent, [GeneratedEnum] StartCommandFlags flags, int startId)
 		{
 			var ongoing = new Notification(Resource.Drawable.StartButton, "DemoService in foreground");

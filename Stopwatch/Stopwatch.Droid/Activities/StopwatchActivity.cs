@@ -93,12 +93,12 @@ namespace Stopwatch.Droid.Activities
 			{
 
 				instance.fabContainer.ViewTreeObserver.RemoveOnPreDrawListener(this);
-				instance.offset1 = instance.fab.GetY() - instance.fabAction1.GetY();
-				instance.fabAction1.TranslationY = instance.offset1;
-				instance.offset2 = instance.fab.GetY() - instance.fabAction2.GetY();
-				instance.fabAction2.TranslationY = instance.offset2;
-				instance.offset3 = instance.fab.GetY() - instance.fabAction3.GetY();
-				instance.fabAction3.TranslationY = instance.offset3;
+				instance.offset1 = instance.fab.GetY() - instance.fabPause.GetY();
+				instance.fabPause.TranslationY = instance.offset1;
+				instance.offset2 = instance.fab.GetY() - instance.fabStop.GetY();
+				instance.fabStop.TranslationY = instance.offset2;
+				instance.offset3 = instance.fab.GetY() - instance.fabReload.GetY();
+				instance.fabReload.TranslationY = instance.offset3;
 				return true;
 			}
 		}
@@ -111,23 +111,29 @@ namespace Stopwatch.Droid.Activities
 		const String TRANSLATION_Y = "translationY";
 		internal ImageButton fab;
 		internal bool expanded;
-		internal View fabAction1;
-		internal View fabAction2;
-		internal View fabAction3;
+		internal ImageButton fabPause;
+		internal ImageButton fabStop;
+		internal ImageButton fabReload;
 		internal float offset1;
 		internal float offset2;
 		internal float offset3;
 		LinearLayout startlayout;
 		ImageButton startButton;
-		Chronometer chronometer;
+        TextView chronometer;
 
 		internal ViewGroup fabContainer;
 		long startTime;
+        long elapsedOnPause;
+        bool pauseClicked = false; 
 
-		StopwatchServiceBinder binder;
+        private long ElapsedTime { get { return (SystemClock.ElapsedRealtime() - startTime); } }
+
+        StopwatchServiceBinder binder;
 		StopwatchServiceConnection stopwatchServiceConnection;
 		bool isBound = false;
 		bool isConfigurationChange = false;
+
+
 		#endregion
 
 
@@ -138,15 +144,16 @@ namespace Stopwatch.Droid.Activities
 
 			fabContainer = (ViewGroup)FindViewById(Resource.Id.fab_container);
 			fab = (ImageButton)FindViewById(Resource.Id.fab);
-			fabAction1 = FindViewById(Resource.Id.fab_action_1);
-			fabAction2 = FindViewById(Resource.Id.fab_action_2);
-			fabAction3 = FindViewById(Resource.Id.fab_action_3);
-			chronometer = FindViewById<Chronometer>(Resource.Id.chronometer);
+			fabPause = FindViewById<ImageButton>(Resource.Id.fab_pause);
+            fabStop = FindViewById<ImageButton>(Resource.Id.fab_stop);
+            fabReload = FindViewById<ImageButton>(Resource.Id.fab_reload);
+			chronometer = FindViewById<TextView>(Resource.Id.textClock);
 
 			startlayout = FindViewById<LinearLayout>(Resource.Id.start_layout);
 			var userName = FindViewById<TextView>(Resource.Id.user_name);
 			userName.Text = Intent.GetStringExtra("login");
-			startButton = FindViewById<ImageButton>(Resource.Id.start_button);
+            chronometer.Text = "00:00";
+            startButton = FindViewById<ImageButton>(Resource.Id.start_button);
 
 			fab.SetOnClickListener(new ClickListener(this));
 
@@ -158,17 +165,17 @@ namespace Stopwatch.Droid.Activities
 			{
 				StartButtonClick();
 			};
-			fabAction1.Click += delegate
+            fabPause.Click += delegate
 			{
-				FabAction1();
+				OnTimerPause();
 			};
-			fabAction2.Click += delegate
+            fabStop.Click += delegate
 			{
-				FabAction2();
+                OnTimerStop();
 			};
-			fabAction3.Click += delegate
+            fabReload.Click += delegate
 			{
-				FabAction3();
+                OnTimerReload();
 			};
 
 			stopwatchServiceConnection = LastNonConfigurationInstance as StopwatchServiceConnection;
@@ -230,8 +237,6 @@ namespace Stopwatch.Droid.Activities
 				fabContainer.Visibility = ViewStates.Visible;
 				chronometer.Visibility = ViewStates.Visible;
 				startTime = savedInstanceState.GetLong("startTime");
-				chronometer.Base = startTime;
-				chronometer.Start();
 
 
 				
@@ -241,43 +246,82 @@ namespace Stopwatch.Droid.Activities
 
 
 		#region Actions
-		public void FabAction1()
+		public void OnTimerPause()
 		{
-			Log.Info(TAG, "Action 1");
+            if (!pauseClicked)
+            {
+                pauseClicked = true;
+                elapsedOnPause = ElapsedTime;
+
+                fabPause.SetImageResource(Resource.Drawable.play);
+                stopwatchServiceConnection.Binder.GetStopwatchService().StopTimer();
+            }
+            else
+            {
+                pauseClicked = false;
+                if (elapsedOnPause != 0)
+                {
+                    startTime += ElapsedTime - elapsedOnPause;                
+                }
+                else
+                {
+                    startTime = SystemClock.ElapsedRealtime();
+                }
+                
+                fabPause.SetImageResource(Resource.Drawable.pause);
+                stopwatchServiceConnection.Binder.GetStopwatchService().ResumeTimer();
+            }
 		}
 
-		public void FabAction2()
+		public void OnTimerStop()
 		{
-			Log.Info(TAG, "Action 2");
-		}
+            StopService(new Intent("com.xamarin.StopwatchService"));
+            chronometer.Text = "00:00";
+            startlayout.Visibility = ViewStates.Visible;
+            fabContainer.Visibility = ViewStates.Invisible;
+            chronometer.Visibility = ViewStates.Invisible;
+            collapseFab();
+            pauseClicked = false;
+        }
 
-		public void FabAction3()
+		public void OnTimerReload()
 		{
-			Log.Info(TAG, "Action 3");
-		}
+            chronometer.Text = "00:00";
+            startTime = SystemClock.ElapsedRealtime();
+            elapsedOnPause = 0;
+
+        }
 
 		public void StartButtonClick()
 		{
 
-			startlayout.Visibility = ViewStates.Gone;
-			fabContainer.Visibility = ViewStates.Visible;
-			chronometer.Visibility = ViewStates.Visible;
+
 
 			startTime = SystemClock.ElapsedRealtime();
-			chronometer.Base = startTime;
-			chronometer.Start();
 			StartService(new Intent("com.xamarin.StopwatchService"));
 			stopwatchServiceConnection.Binder.GetStopwatchService().StartTimer(1000, () => OnTimerTick());
 
-		}
+            startlayout.Visibility = ViewStates.Gone;
+            fabContainer.Visibility = ViewStates.Visible;
+            chronometer.Visibility = ViewStates.Visible;
+        }
 
 		private void OnTimerTick()
 		{
 
-			long l = SystemClock.ElapsedRealtime();
-			TimeSpan ts = new TimeSpan(l - startTime);
-			SendNotification(1, String.Format("Already passed {0}", SystemClock.ElapsedRealtime()- startTime), ts.ToString(@"hh\:mm\:ss"), Resource.Drawable.StartButton);
-		}
+			
+            TimeSpan ts = TimeSpan.FromMilliseconds(ElapsedTime);
+            string elapsedTime = ts.ToString(@"mm\:ss");
+
+            SendNotification(1, elapsedTime, null, Resource.Drawable.StartButton); //need refactoring
+
+            
+            RunOnUiThread(() =>
+            {
+                chronometer.Text = elapsedTime;
+            });
+            
+        }
 
 
 		public void SendNotification(int id,string title, string text, int icon)
@@ -304,9 +348,9 @@ namespace Stopwatch.Droid.Activities
 		{
 			fab.SetImageResource(Resource.Drawable.animated_minus);
 			AnimatorSet animatorSet = new AnimatorSet();
-			animatorSet.PlayTogether(createCollapseAnimator(fabAction1, offset1),
-					createCollapseAnimator(fabAction2, offset2),
-					createCollapseAnimator(fabAction3, offset3));
+			animatorSet.PlayTogether(createCollapseAnimator(fabPause, offset1),
+					createCollapseAnimator(fabStop, offset2),
+					createCollapseAnimator(fabReload, offset3));
 			animatorSet.Start();
 			animateFab();
 		}
@@ -315,9 +359,9 @@ namespace Stopwatch.Droid.Activities
 		{
 			fab.SetImageResource(Resource.Drawable.animated_plus);
 			AnimatorSet animatorSet = new AnimatorSet();
-			animatorSet.PlayTogether(createExpandAnimator(fabAction1, offset1),
-					createExpandAnimator(fabAction2, offset2),
-					createExpandAnimator(fabAction3, offset3));
+			animatorSet.PlayTogether(createExpandAnimator(fabPause, offset1),
+					createExpandAnimator(fabStop, offset2),
+					createExpandAnimator(fabReload, offset3));
 			animatorSet.Start();
 			animateFab();
 		}

@@ -144,16 +144,28 @@ namespace Stopwatch.Droid
 			public const int minus = 2130837509;
 			
 			// aapt resource value: 0x7f020006
-			public const int plus = 2130837510;
+			public const int pause = 2130837510;
 			
 			// aapt resource value: 0x7f020007
-			public const int StartButton = 2130837511;
+			public const int play = 2130837511;
 			
 			// aapt resource value: 0x7f020008
-			public const int StartButton_normal = 2130837512;
+			public const int plus = 2130837512;
 			
 			// aapt resource value: 0x7f020009
-			public const int StartButton_pressed = 2130837513;
+			public const int reload = 2130837513;
+			
+			// aapt resource value: 0x7f02000a
+			public const int StartButton = 2130837514;
+			
+			// aapt resource value: 0x7f02000b
+			public const int StartButton_normal = 2130837515;
+			
+			// aapt resource value: 0x7f02000c
+			public const int StartButton_pressed = 2130837516;
+			
+			// aapt resource value: 0x7f02000d
+			public const int stop = 2130837517;
 			
 			static Drawable()
 			{
@@ -168,23 +180,20 @@ namespace Stopwatch.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0a000c
-			public const int chronometer = 2131361804;
-			
 			// aapt resource value: 0x7f0a0003
 			public const int fab = 2131361795;
 			
-			// aapt resource value: 0x7f0a0004
-			public const int fab_action_1 = 2131361796;
-			
-			// aapt resource value: 0x7f0a0002
-			public const int fab_action_2 = 2131361794;
-			
-			// aapt resource value: 0x7f0a0001
-			public const int fab_action_3 = 2131361793;
-			
 			// aapt resource value: 0x7f0a0000
 			public const int fab_container = 2131361792;
+			
+			// aapt resource value: 0x7f0a0004
+			public const int fab_pause = 2131361796;
+			
+			// aapt resource value: 0x7f0a0001
+			public const int fab_reload = 2131361793;
+			
+			// aapt resource value: 0x7f0a0002
+			public const int fab_stop = 2131361794;
 			
 			// aapt resource value: 0x7f0a0006
 			public const int input_login = 2131361798;
@@ -203,6 +212,9 @@ namespace Stopwatch.Droid
 			
 			// aapt resource value: 0x7f0a0008
 			public const int submit_button = 2131361800;
+			
+			// aapt resource value: 0x7f0a000c
+			public const int textClock = 2131361804;
 			
 			// aapt resource value: 0x7f0a000a
 			public const int user_name = 2131361802;
