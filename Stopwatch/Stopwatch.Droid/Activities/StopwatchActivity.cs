@@ -198,7 +198,7 @@ namespace Stopwatch.Droid.Activities
                 
                 ApplicationContext.UnbindService(stopwatchServiceConnection);
                 isBound = false;
-                StopService(new Intent("com.xamarin.StopwatchService"));
+               
             }
         }
 
@@ -238,7 +238,7 @@ namespace Stopwatch.Droid.Activities
                 elapsedOnPause = ElapsedTime;
 
                 fabPause.SetImageResource(Resource.Drawable.play);
-                stopwatchServiceConnection.Binder.GetStopwatchService().StopTimer();
+                stopwatchServiceConnection.Binder.GetStopwatchService().PauseTimer();
             }
             else
             {
@@ -259,7 +259,7 @@ namespace Stopwatch.Droid.Activities
 
 		public void OnTimerStop()
 		{
-            StopService(new Intent("com.xamarin.StopwatchService"));
+            stopwatchServiceConnection.Binder.GetStopwatchService().StopTimer();
             chronometer.Text = "00:00";
             startlayout.Visibility = ViewStates.Visible;
             fabContainer.Visibility = ViewStates.Invisible;

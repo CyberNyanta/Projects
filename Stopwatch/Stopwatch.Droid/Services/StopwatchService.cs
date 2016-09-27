@@ -37,9 +37,13 @@ namespace Stopwatch.Droid.Services
 			timer.Start();
 		}
 
-        public void StopTimer()
+        public void PauseTimer()
         {
             timer.Stop();            
+        }
+        public void StopTimer()
+        {
+            timer?.Dispose();
         }
 
         public void ResumeTimer()
@@ -56,16 +60,18 @@ namespace Stopwatch.Droid.Services
 
 		
 		}
-        public override void OnDestroy()
-        {
-            base.OnDestroy();
-            
-        }
 
         public override void OnTaskRemoved(Intent rootIntent)
         {
             base.OnTaskRemoved(rootIntent);
             StopSelf();
+        }
+
+
+        public override bool OnUnbind(Intent intent)
+        {
+            timer?.Dispose();
+            return base.OnUnbind(intent);
         }
     }
 

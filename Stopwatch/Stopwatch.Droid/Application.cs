@@ -20,7 +20,7 @@ namespace ResourceTask.Droid
         }
         public override void OnTerminate()
         {
-            ApplicationContext.StopService(new Intent("com.xamarin.StopwatchService"));
+            
             base.OnTerminate();
             
         }
