@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Hello">Hello World, Click Me!</string>
-    <string name="ApplicationName">Stopwatch.Droid</string>
+  <string name="ApplicationName">Stopwatch.Droid</string>
+  <string name="Email">Email</string>
+  <string name="Password">Password</string>
+  <string name="LoginError">Login must have at least 3 characters</string>
+
 </resources>

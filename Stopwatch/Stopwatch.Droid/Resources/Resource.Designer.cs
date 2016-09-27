@@ -112,6 +112,27 @@ namespace Stopwatch.Droid
 			// aapt resource value: 0x7f060003
 			public const int fab_rise = 2131099651;
 			
+			// aapt resource value: 0x7f060005
+			public const int margin_medium = 2131099653;
+			
+			// aapt resource value: 0x7f060004
+			public const int margin_small = 2131099652;
+			
+			// aapt resource value: 0x7f060007
+			public const int okButton_height = 2131099655;
+			
+			// aapt resource value: 0x7f060008
+			public const int okButton_width = 2131099656;
+			
+			// aapt resource value: 0x7f060006
+			public const int padding_small = 2131099654;
+			
+			// aapt resource value: 0x7f06000a
+			public const int textSize_clock = 2131099658;
+			
+			// aapt resource value: 0x7f060009
+			public const int textSize_userName = 2131099657;
+			
 			static Dimension()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -180,44 +201,56 @@ namespace Stopwatch.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0a0003
-			public const int fab = 2131361795;
+			// aapt resource value: 0x7f0b0005
+			public const int fab = 2131427333;
 			
-			// aapt resource value: 0x7f0a0000
-			public const int fab_container = 2131361792;
+			// aapt resource value: 0x7f0b0002
+			public const int fab_container = 2131427330;
 			
-			// aapt resource value: 0x7f0a0004
-			public const int fab_pause = 2131361796;
+			// aapt resource value: 0x7f0b0006
+			public const int fab_pause = 2131427334;
 			
-			// aapt resource value: 0x7f0a0001
-			public const int fab_reload = 2131361793;
+			// aapt resource value: 0x7f0b0003
+			public const int fab_reload = 2131427331;
 			
-			// aapt resource value: 0x7f0a0002
-			public const int fab_stop = 2131361794;
+			// aapt resource value: 0x7f0b0004
+			public const int fab_stop = 2131427332;
 			
-			// aapt resource value: 0x7f0a0006
-			public const int input_login = 2131361798;
+			// aapt resource value: 0x7f0b0008
+			public const int input_login = 2131427336;
 			
-			// aapt resource value: 0x7f0a0007
-			public const int input_password = 2131361799;
+			// aapt resource value: 0x7f0b0009
+			public const int input_password = 2131427337;
 			
-			// aapt resource value: 0x7f0a0005
-			public const int scrollView1 = 2131361797;
+			// aapt resource value: 0x7f0b0001
+			public const int main_content = 2131427329;
 			
-			// aapt resource value: 0x7f0a000b
-			public const int start_button = 2131361803;
+			// aapt resource value: 0x7f0b0010
+			public const int menu_about = 2131427344;
 			
-			// aapt resource value: 0x7f0a0009
-			public const int start_layout = 2131361801;
+			// aapt resource value: 0x7f0b000f
+			public const int menu_zero = 2131427343;
 			
-			// aapt resource value: 0x7f0a0008
-			public const int submit_button = 2131361800;
+			// aapt resource value: 0x7f0b0007
+			public const int scrollView1 = 2131427335;
 			
-			// aapt resource value: 0x7f0a000c
-			public const int textClock = 2131361804;
+			// aapt resource value: 0x7f0b000d
+			public const int start_button = 2131427341;
 			
-			// aapt resource value: 0x7f0a000a
-			public const int user_name = 2131361802;
+			// aapt resource value: 0x7f0b000b
+			public const int start_layout = 2131427339;
+			
+			// aapt resource value: 0x7f0b000a
+			public const int submit_button = 2131427338;
+			
+			// aapt resource value: 0x7f0b000e
+			public const int textClock = 2131427342;
+			
+			// aapt resource value: 0x7f0b0000
+			public const int toolbar = 2131427328;
+			
+			// aapt resource value: 0x7f0b000c
+			public const int user_name = 2131427340;
 			
 			static Id()
 			{
@@ -249,13 +282,19 @@ namespace Stopwatch.Droid
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int fab = 2130903040;
+			public const int AboutLayout = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int Login = 2130903041;
+			public const int fab = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int Stopwatch = 2130903042;
+			public const int Login = 2130903042;
+			
+			// aapt resource value: 0x7f030003
+			public const int Stopwatch = 2130903043;
+			
+			// aapt resource value: 0x7f030004
+			public const int Toolbar = 2130903044;
 			
 			static Layout()
 			{
@@ -267,14 +306,36 @@ namespace Stopwatch.Droid
 			}
 		}
 		
+		public partial class Menu
+		{
+			
+			// aapt resource value: 0x7f0a0000
+			public const int stopwatchMenu = 2131361792;
+			
+			static Menu()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Menu()
+			{
+			}
+		}
+		
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f080001
-			public const int ApplicationName = 2131230721;
-			
 			// aapt resource value: 0x7f080000
-			public const int Hello = 2131230720;
+			public const int ApplicationName = 2131230720;
+			
+			// aapt resource value: 0x7f080001
+			public const int Email = 2131230721;
+			
+			// aapt resource value: 0x7f080003
+			public const int LoginError = 2131230723;
+			
+			// aapt resource value: 0x7f080002
+			public const int Password = 2131230722;
 			
 			static String()
 			{

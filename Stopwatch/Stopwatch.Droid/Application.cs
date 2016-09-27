@@ -8,7 +8,7 @@ using Android.Content;
 
 namespace ResourceTask.Droid
 {
-    [Application(Theme = "@android:style/Theme.Material")]
+    [Application(Theme = "@style/AppTheme")]
     public class Application : Android.App.Application
     {
         public Application(IntPtr javaReference, JniHandleOwnership transfer) : base(javaReference, transfer) { }

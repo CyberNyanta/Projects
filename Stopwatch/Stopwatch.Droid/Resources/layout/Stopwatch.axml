@@ -10,6 +10,9 @@
     android:background="@drawable/background_image"
     android:tag="main"
     android:transitionName="content">
+  <include
+      android:id="@+id/toolbar"
+      layout="@layout/toolbar" />
     <include
         layout="@layout/fab" />
     <LinearLayout
@@ -17,8 +20,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_centerVertical="true"
+        android:layout_centerVertical="true" 
         android:id="@+id/start_layout"
+        
         android:visibility="visible">
         <TextView
             android:layout_width="wrap_content"
@@ -26,26 +30,17 @@
             android:id="@+id/user_name"
             android:layout_centerHorizontal="true"
             android:layout_centerInParent="true"
-            android:textSize="50sp" />
+            android:textSize="@dimen/textSize_userName" />
         <ImageButton
             android:id="@+id/start_button"
             style="@style/StartButton" />
     </LinearLayout>
-<!--<Chronometer
-        android:id="@+id/chronometer"
-        android:format="%s"
-        android:visibility="invisible"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="100sp"
-        android:layout_centerInParent="true"
-        android:layout_centerHorizontal="true" />-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="invisible"
         android:id="@+id/textClock"
-        android:textSize="100sp"
+        android:textSize="@dimen/textSize_clock"
         android:layout_centerInParent="true"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

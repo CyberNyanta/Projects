@@ -13,7 +13,7 @@ using Stopwatch.Core.Utils;
 
 namespace Stopwatch.Droid.Activities
 {
-    [Activity(Label = "LoginActivity",MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "LoginActivity",MainLauncher = true)]
     public class LoginActivity : Activity
     {
         EditText login;
@@ -41,7 +41,7 @@ namespace Stopwatch.Droid.Activities
             }
             else
             {
-                login.Error = "Login must have at least 3 characters";
+                login.Error = GetString(Resource.String.LoginError);
             }
         }
 

@@ -104,8 +104,6 @@ namespace Stopwatch.Droid.Activities
 		}
 		#endregion
 
-
-
 		#region prop
 		const String TAG = "Floating Action Button";
 		const String TRANSLATION_Y = "translationY";
@@ -135,7 +133,6 @@ namespace Stopwatch.Droid.Activities
 
 		#endregion
 
-
 		protected override void OnCreate(Bundle instance)
 		{
 			base.OnCreate(instance);
@@ -157,8 +154,7 @@ namespace Stopwatch.Droid.Activities
 			fab.SetOnClickListener(new ClickListener(this));
 
 			fabContainer.ViewTreeObserver.AddOnPreDrawListener(new PreDrawListener(this));
-
-
+            
 
 			startButton.Click += delegate
 			{
@@ -178,9 +174,39 @@ namespace Stopwatch.Droid.Activities
 			};
 
 
-		}
 
-		protected override void OnStart()
+            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+
+            SetActionBar(toolbar);
+
+            ActionBar.Title = "Hello from Toolbar";
+
+           
+
+
+        }
+
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.stopwatchMenu, menu);
+            return base.OnCreateOptionsMenu(menu);
+        }
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                case Resource.Id.menu_zero:
+                    OnBackPressed();
+                    break;
+                case Resource.Id.menu_about:
+                    var activity = new Intent(this, typeof(AboutActivity));                  
+                    StartActivity(activity);
+                    break;
+            }
+            return base.OnOptionsItemSelected(item);
+        }
+
+        protected override void OnStart()
 		{
 			base.OnStart();
 
@@ -278,9 +304,6 @@ namespace Stopwatch.Droid.Activities
 
 		public void StartButtonClick()
 		{
-
-
-
 			startTime = SystemClock.ElapsedRealtime();
 			StartService(new Intent("com.xamarin.StopwatchService"));
 			stopwatchServiceConnection.Binder.GetStopwatchService().StartTimer(1000, () => OnTimerTick());

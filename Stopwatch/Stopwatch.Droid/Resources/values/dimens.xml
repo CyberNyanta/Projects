@@ -7,4 +7,15 @@
   <dimen name="fab_elevation">5dp</dimen>
   <dimen name="fab_rise">3dp</dimen>
   <integer name="fab_duration">100</integer>
+
+  <dimen name="margin_small">30dp</dimen>
+  <dimen name="margin_medium">50dp</dimen>
+
+  <dimen name="padding_small">20dp</dimen>
+
+  <dimen name="okButton_height">50dp</dimen>
+  <dimen name="okButton_width">50dp</dimen>
+  
+  <dimen name="textSize_userName">50sp</dimen>
+  <dimen name="textSize_clock">100sp</dimen>
 </resources>
