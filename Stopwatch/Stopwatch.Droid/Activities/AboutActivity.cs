@@ -27,7 +27,7 @@ namespace Stopwatch.Droid.Activities
             ActionBar.SetDisplayShowHomeEnabled(true);
             //ActionBar.SetDisplayShowHomeEnabled(true);
             
-                            
+            
             // Create your application here
         }
 

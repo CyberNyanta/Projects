@@ -13,7 +13,7 @@ using Stopwatch.Core.Utils;
 
 namespace Stopwatch.Droid.Activities
 {
-    [Activity(Label = "LoginActivity",MainLauncher = true)]
+    [Activity(MainLauncher = true)]
     public class LoginActivity : Activity
     {
         EditText login;

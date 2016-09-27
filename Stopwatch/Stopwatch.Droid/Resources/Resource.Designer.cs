@@ -201,56 +201,59 @@ namespace Stopwatch.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0b0005
-			public const int fab = 2131427333;
-			
-			// aapt resource value: 0x7f0b0002
-			public const int fab_container = 2131427330;
-			
 			// aapt resource value: 0x7f0b0006
-			public const int fab_pause = 2131427334;
+			public const int fab = 2131427334;
 			
 			// aapt resource value: 0x7f0b0003
-			public const int fab_reload = 2131427331;
+			public const int fab_container = 2131427331;
+			
+			// aapt resource value: 0x7f0b0007
+			public const int fab_pause = 2131427335;
 			
 			// aapt resource value: 0x7f0b0004
-			public const int fab_stop = 2131427332;
+			public const int fab_reload = 2131427332;
 			
-			// aapt resource value: 0x7f0b0008
-			public const int input_login = 2131427336;
+			// aapt resource value: 0x7f0b0005
+			public const int fab_stop = 2131427333;
+			
+			// aapt resource value: 0x7f0b0002
+			public const int imageView1 = 2131427330;
 			
 			// aapt resource value: 0x7f0b0009
-			public const int input_password = 2131427337;
+			public const int input_login = 2131427337;
+			
+			// aapt resource value: 0x7f0b000a
+			public const int input_password = 2131427338;
 			
 			// aapt resource value: 0x7f0b0001
 			public const int main_content = 2131427329;
 			
+			// aapt resource value: 0x7f0b0011
+			public const int menu_about = 2131427345;
+			
 			// aapt resource value: 0x7f0b0010
-			public const int menu_about = 2131427344;
+			public const int menu_zero = 2131427344;
 			
-			// aapt resource value: 0x7f0b000f
-			public const int menu_zero = 2131427343;
-			
-			// aapt resource value: 0x7f0b0007
-			public const int scrollView1 = 2131427335;
-			
-			// aapt resource value: 0x7f0b000d
-			public const int start_button = 2131427341;
-			
-			// aapt resource value: 0x7f0b000b
-			public const int start_layout = 2131427339;
-			
-			// aapt resource value: 0x7f0b000a
-			public const int submit_button = 2131427338;
+			// aapt resource value: 0x7f0b0008
+			public const int scrollView1 = 2131427336;
 			
 			// aapt resource value: 0x7f0b000e
-			public const int textClock = 2131427342;
+			public const int start_button = 2131427342;
+			
+			// aapt resource value: 0x7f0b000c
+			public const int start_layout = 2131427340;
+			
+			// aapt resource value: 0x7f0b000b
+			public const int submit_button = 2131427339;
+			
+			// aapt resource value: 0x7f0b000f
+			public const int textClock = 2131427343;
 			
 			// aapt resource value: 0x7f0b0000
 			public const int toolbar = 2131427328;
 			
-			// aapt resource value: 0x7f0b000c
-			public const int user_name = 2131427340;
+			// aapt resource value: 0x7f0b000d
+			public const int user_name = 2131427341;
 			
 			static Id()
 			{

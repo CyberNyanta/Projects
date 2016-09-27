@@ -6,7 +6,7 @@ using Android.Views;
 using Android.Widget;
 using Android.Content;
 
-namespace ResourceTask.Droid
+namespace Stopwatch.Droid
 {
     [Application(Theme = "@style/AppTheme")]
     public class Application : Android.App.Application
