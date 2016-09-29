@@ -18,4 +18,6 @@
   
   <dimen name="textSize_userName">50sp</dimen>
   <dimen name="textSize_clock">100sp</dimen>
+
+  <dimen name="stroke_width_avatar">50dp</dimen>
 </resources>

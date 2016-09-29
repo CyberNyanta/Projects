@@ -9,83 +9,128 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:fillViewport="true"
+        android:layout_below="@id/toolbar">
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="448dp"
-            android:id="@+id/main_content"
-            android:layout_below="@id/toolbar">
+            android:id="@+id/main_content">
             <ImageView
                 android:id="@+id/imageView1"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:src="@drawable/background_imageV"
-                android:scaleType="fitStart" />
+                android:scaleType="fitXY" />
+          <LinearLayout
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:paddingLeft="10dp"              
+              >
+
+            <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              
+              >
+              <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="40sp"
+               android:layout_alignParentLeft="true"
+               android:text="text" />
+              <RatingBar
+                android:id="@+id/ratingBar"                
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"          
+                android:scaleX ="0.6"
+                android:scaleY ="0.6"
+                android:layout_marginRight ="-40dp"
+                android:numStars="5"
+                android:rating="4"
+                android:isIndicator="true"
+                android:layout_alignParentRight="true"
+                
+                />
+
+              
+              
+            </RelativeLayout>
+
+            <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="20sp"
+               android:text="text" />
+          </LinearLayout>
+          <LinearLayout
+            android:id="@+id/image_container"
+             android:orientation="horizontal"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:paddingLeft="10dp"
+              />
         </LinearLayout>
     </ScrollView>
-  <LinearLayout
-      android:orientation="horizontal"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      
-      android:id="@+id/main_content"
-      android:divider="?android:listDivider"
-      android:showDividers="middle"
-      android:layout_alignParentBottom="true">
     <LinearLayout
-        android:orientation="vertical"
-        android:layout_weight="1"
-        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="20dp"
-        >
-          <TextView
+        android:id="@+id/main_content"
+        android:divider="?android:listDivider"
+        android:showDividers="middle"
+        android:layout_alignParentBottom="true">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="40sp"
-            android:text="text" />
-          <TextView
+            android:paddingLeft="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="40sp"
+                android:text="text" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="text" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:text="text" />
+            android:paddingLeft="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="40sp"
+                android:text="text" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="text" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="40sp"
+                android:text="text" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="text" />
+        </LinearLayout>
     </LinearLayout>
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_weight="1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingLeft="20dp"
-        >
-          <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="40sp"
-            android:text="text" />
-          <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:text="text" />
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_weight="1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingLeft="20dp"
-        >
-          <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="40sp"
-            android:text="text" />
-          <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:text="text" />
-    </LinearLayout>
-  </LinearLayout>
 </RelativeLayout>

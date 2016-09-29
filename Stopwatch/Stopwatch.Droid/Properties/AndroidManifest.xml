@@ -2,5 +2,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="Stopwatch.Droid.Stopwatch.Droid" android:versionCode="1" android:versionName="1.0">
 	<uses-sdk />
 	<application android:label="Stopwatch.Droid"></application>
-  <application android:name="Stopwatch.Droid"/>
+	<application android:name="Stopwatch.Droid" />
 </manifest>

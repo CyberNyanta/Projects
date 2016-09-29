@@ -127,6 +127,9 @@ namespace Stopwatch.Droid
 			// aapt resource value: 0x7f060006
 			public const int padding_small = 2131099654;
 			
+			// aapt resource value: 0x7f06000b
+			public const int stroke_width_avatar = 2131099659;
+			
 			// aapt resource value: 0x7f06000a
 			public const int textSize_clock = 2131099658;
 			
@@ -153,46 +156,58 @@ namespace Stopwatch.Droid
 			public const int animated_plus = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int background_image = 2130837506;
+			public const int avatar = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int background_imageV = 2130837507;
+			public const int background_image = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int divider = 2130837508;
+			public const int background_imageV = 2130837508;
 			
 			// aapt resource value: 0x7f020005
-			public const int fab_background = 2130837509;
+			public const int circle = 2130837509;
 			
 			// aapt resource value: 0x7f020006
-			public const int Icon = 2130837510;
+			public const int circle2 = 2130837510;
 			
 			// aapt resource value: 0x7f020007
-			public const int minus = 2130837511;
+			public const int divider = 2130837511;
 			
 			// aapt resource value: 0x7f020008
-			public const int pause = 2130837512;
+			public const int fab_background = 2130837512;
 			
 			// aapt resource value: 0x7f020009
-			public const int play = 2130837513;
+			public const int Icon = 2130837513;
 			
 			// aapt resource value: 0x7f02000a
-			public const int plus = 2130837514;
+			public const int img = 2130837514;
 			
 			// aapt resource value: 0x7f02000b
-			public const int reload = 2130837515;
+			public const int minus = 2130837515;
 			
 			// aapt resource value: 0x7f02000c
-			public const int StartButton = 2130837516;
+			public const int pause = 2130837516;
 			
 			// aapt resource value: 0x7f02000d
-			public const int StartButton_normal = 2130837517;
+			public const int play = 2130837517;
 			
 			// aapt resource value: 0x7f02000e
-			public const int StartButton_pressed = 2130837518;
+			public const int plus = 2130837518;
 			
 			// aapt resource value: 0x7f02000f
-			public const int stop = 2130837519;
+			public const int reload = 2130837519;
+			
+			// aapt resource value: 0x7f020010
+			public const int StartButton = 2130837520;
+			
+			// aapt resource value: 0x7f020011
+			public const int StartButton_normal = 2130837521;
+			
+			// aapt resource value: 0x7f020012
+			public const int StartButton_pressed = 2130837522;
+			
+			// aapt resource value: 0x7f020013
+			public const int stop = 2130837523;
 			
 			static Drawable()
 			{
@@ -207,62 +222,68 @@ namespace Stopwatch.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0b0006
-			public const int fab = 2131427334;
-			
-			// aapt resource value: 0x7f0b0003
-			public const int fab_container = 2131427331;
-			
-			// aapt resource value: 0x7f0b0007
-			public const int fab_pause = 2131427335;
-			
-			// aapt resource value: 0x7f0b0004
-			public const int fab_reload = 2131427332;
+			// aapt resource value: 0x7f0b0008
+			public const int fab = 2131427336;
 			
 			// aapt resource value: 0x7f0b0005
-			public const int fab_stop = 2131427333;
+			public const int fab_container = 2131427333;
+			
+			// aapt resource value: 0x7f0b0009
+			public const int fab_pause = 2131427337;
+			
+			// aapt resource value: 0x7f0b0006
+			public const int fab_reload = 2131427334;
+			
+			// aapt resource value: 0x7f0b0007
+			public const int fab_stop = 2131427335;
 			
 			// aapt resource value: 0x7f0b0002
 			public const int imageView1 = 2131427330;
 			
-			// aapt resource value: 0x7f0b0009
-			public const int input_login = 2131427337;
+			// aapt resource value: 0x7f0b0004
+			public const int image_container = 2131427332;
 			
-			// aapt resource value: 0x7f0b000a
-			public const int input_password = 2131427338;
+			// aapt resource value: 0x7f0b000b
+			public const int input_login = 2131427339;
+			
+			// aapt resource value: 0x7f0b000c
+			public const int input_password = 2131427340;
 			
 			// aapt resource value: 0x7f0b0001
 			public const int main_content = 2131427329;
 			
-			// aapt resource value: 0x7f0b000c
-			public const int main_layout = 2131427340;
+			// aapt resource value: 0x7f0b000e
+			public const int main_layout = 2131427342;
 			
-			// aapt resource value: 0x7f0b0012
-			public const int menu_about = 2131427346;
+			// aapt resource value: 0x7f0b0014
+			public const int menu_about = 2131427348;
+			
+			// aapt resource value: 0x7f0b0013
+			public const int menu_zero = 2131427347;
+			
+			// aapt resource value: 0x7f0b0003
+			public const int ratingBar = 2131427331;
+			
+			// aapt resource value: 0x7f0b000a
+			public const int scrollView1 = 2131427338;
 			
 			// aapt resource value: 0x7f0b0011
-			public const int menu_zero = 2131427345;
-			
-			// aapt resource value: 0x7f0b0008
-			public const int scrollView1 = 2131427336;
+			public const int start_button = 2131427345;
 			
 			// aapt resource value: 0x7f0b000f
-			public const int start_button = 2131427343;
+			public const int start_layout = 2131427343;
 			
 			// aapt resource value: 0x7f0b000d
-			public const int start_layout = 2131427341;
+			public const int submit_button = 2131427341;
 			
-			// aapt resource value: 0x7f0b000b
-			public const int submit_button = 2131427339;
-			
-			// aapt resource value: 0x7f0b0010
-			public const int textClock = 2131427344;
+			// aapt resource value: 0x7f0b0012
+			public const int textClock = 2131427346;
 			
 			// aapt resource value: 0x7f0b0000
 			public const int toolbar = 2131427328;
 			
-			// aapt resource value: 0x7f0b000e
-			public const int user_name = 2131427342;
+			// aapt resource value: 0x7f0b0010
+			public const int user_name = 2131427344;
 			
 			static Id()
 			{

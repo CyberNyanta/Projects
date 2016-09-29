@@ -9,6 +9,8 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Graphics;
+using Stopwatch.Droid.Widgets;
 
 namespace Stopwatch.Droid.Activities
 {
@@ -25,11 +27,27 @@ namespace Stopwatch.Droid.Activities
             SetActionBar(toolbar);
             ActionBar.SetDisplayHomeAsUpEnabled(true);
             ActionBar.SetDisplayShowHomeEnabled(true);
-            //ActionBar.SetDisplayShowHomeEnabled(true);
             
             
+
+            LinearLayout imageContainer = FindViewById<LinearLayout>(Resource.Id.image_container);
+            for (int i = 0; i < 4; i++)
+            {
+                ImageView image = new ImageView(this);
+                var coeff = Resources.DisplayMetrics.Density;
+                image.LayoutParameters = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WrapContent, ViewGroup.LayoutParams.WrapContent);
+                image.Background = GetDrawable(Resource.Drawable.img);
+
+                imageContainer.AddView(image);
+            }
+            
+
+
             // Create your application here
+
         }
+
+
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
